@@ -1,0 +1,17 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/julio.gutierrez2/Documents/GitHub/MasterComportamientos/Comportamientos/Content/BluePrints/AI_Character.uasset",
+				"C:/Users/julio.gutierrez2/Documents/GitHub/MasterComportamientos/Comportamientos/Content/BluePrints/MyController.uasset",
+				"C:/Users/julio.gutierrez2/Documents/GitHub/MasterComportamientos/Comportamientos/Content/BluePrints/Ejercicio1/AI_Character.uasset",
+				"C:/Users/julio.gutierrez2/Documents/GitHub/MasterComportamientos/Comportamientos/Content/BluePrints/Ejercicio1/MyController.uasset",
+				"C:/Users/julio.gutierrez2/Documents/GitHub/MasterComportamientos/Comportamientos/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/CF/MHVLKKLZ1RADE5UVGE7JCP.uasset",
+				"C:/Users/julio.gutierrez2/Documents/GitHub/MasterComportamientos/Comportamientos/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/TY/RYXRHK0BMHQ3LFNAIUFCQ1.uasset"
+			]
+		}
+	]
+}
