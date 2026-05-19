@@ -3,13 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AIController.h"
+#include "TargetPoint_Ej3.h"
 
-/**
- * 
- */
-class COMPORTAMIENTOS_API CharAIC_EJ3
+#include "CharAIC_Ej3.generated.h"
+
+UCLASS()
+class COMPORTAMIENTOS_API ACharAIC_Ej3 : public AAIController
 {
+	GENERATED_BODY()
+	
 public:
-	CharAIC_EJ3();
-	~CharAIC_EJ3();
+	UFUNCTION(BlueprintCallable, Category = "Task")
+	void UpdateNextTargetPoint();
 };
