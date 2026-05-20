@@ -3,3 +3,12 @@
 
 #include "BTTask_UpdateNextTargetPoint_Ej3.h"
 
+EBTNodeResult::Type UBTTask_UpdateNextTargetPoint_Ej3::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
+{
+	return EBTNodeResult::Type();
+}
+
+FString UBTTask_UpdateNextTargetPoint_Ej3::GetStaticDescription() const
+{
+	return FString();
+}
