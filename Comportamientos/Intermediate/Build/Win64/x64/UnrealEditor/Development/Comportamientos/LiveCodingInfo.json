@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Comportamientos.gen.cpp.obj": [
+			"BTTask_UpdateNextTargetPoint_Ej3.gen.cpp.obj",
+			"CharAIC_EJ3.gen.cpp.obj",
+			"CharAI_Ej3.gen.cpp.obj",
+			"Comportamientos.init.gen.cpp.obj",
+			"TargetPoint_Ej3.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Comportamientos.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Comportamientos.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ComportamientosEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Comportamientos">
+      <UniqueIdentifier>{97452183-6670-35B8-9493-4C515C11B389}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Comportamientos\BTTask_UpdateNextTargetPoint_Ej3.cpp">
+      <Filter>Source\Comportamientos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Comportamientos\BTTask_UpdateNextTargetPoint_Ej3.h">
+      <Filter>Source\Comportamientos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Comportamientos\CharAIC_EJ3.cpp">
+      <Filter>Source\Comportamientos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Comportamientos\CharAIC_EJ3.h">
+      <Filter>Source\Comportamientos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Comportamientos\CharAI_Ej3.cpp">
+      <Filter>Source\Comportamientos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Comportamientos\CharAI_Ej3.h">
+      <Filter>Source\Comportamientos</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Comportamientos\Comportamientos.Build.cs">
+      <Filter>Source\Comportamientos</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Comportamientos\Comportamientos.cpp">
+      <Filter>Source\Comportamientos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Comportamientos\Comportamientos.h">
+      <Filter>Source\Comportamientos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Comportamientos\TargetPoint_Ej3.cpp">
+      <Filter>Source\Comportamientos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Comportamientos\TargetPoint_Ej3.h">
+      <Filter>Source\Comportamientos</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

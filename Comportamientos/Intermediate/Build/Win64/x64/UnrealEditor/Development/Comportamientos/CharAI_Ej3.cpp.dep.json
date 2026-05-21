@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\source\\comportamientos\\charai_ej3.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\intermediate\\build\\win64\\x64\\comportamientoseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\comportamientos\\definitions.comportamientos.h",
+            "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\source\\comportamientos\\charai_ej3.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\intermediate\\build\\win64\\unrealeditor\\inc\\comportamientos\\uht\\charai_ej3.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

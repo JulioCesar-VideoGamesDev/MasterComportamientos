@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\source\\comportamientos\\comportamientos.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\intermediate\\build\\win64\\x64\\comportamientoseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\comportamientos\\definitions.comportamientos.h",
+            "c:\\users\\julio.gutierrez2\\documents\\github\\mastercomportamientos\\comportamientos\\source\\comportamientos\\comportamientos.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

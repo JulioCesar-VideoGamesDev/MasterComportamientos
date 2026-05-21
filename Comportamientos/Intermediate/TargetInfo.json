@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Comportamientos",
+			"Path": "..\\Source\\Comportamientos.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ComportamientosEditor",
+			"Path": "..\\Source\\ComportamientosEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
