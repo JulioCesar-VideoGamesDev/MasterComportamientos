@@ -14,6 +14,13 @@ class BEHAVIOURSEX3_CPP_API ACharAIC_Ej3 : public AAIController
 	GENERATED_BODY()
 	
 public:
+	UPROPERTY(BlueprintReadWrite, Category = "Task")
+	float TraceRadius{10.f};
+
 	UFUNCTION(BlueprintCallable, Category = "Task")
 	void UpdateNextTargetPoint();
+
+	UFUNCTION(BlueprintCallable, Category = "Task")
+	void CheckNearbyEnemy();
+
 };

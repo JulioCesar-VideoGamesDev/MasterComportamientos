@@ -3,14 +3,17 @@
 
 #include "CharAIC_Ej3.h"
 #include "BrainComponent.h"
+#include "EngineUtils.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
-#include "EngineUtils.h"
+
 
 void ACharAIC_Ej3::UpdateNextTargetPoint()
 {
 	UBrainComponent* Brain = GetBrainComponent();
 	UBlackboardComponent* pBlackBoard = Brain->GetBlackboardComponent();
+
 	int32 iTargetPointIndex = pBlackBoard->GetValueAsInt("TargetPointIndex");
 
 	if (iTargetPointIndex >= 4)
@@ -30,5 +33,34 @@ void ACharAIC_Ej3::UpdateNextTargetPoint()
 		}
 	}
 
-	pBlackBoard->SetValueAsInt("TargetPositionIndex", (iTargetPointIndex + 1));
+	pBlackBoard->SetValueAsInt("TargetPointIndex", (iTargetPointIndex + 1));
+}
+
+void ACharAIC_Ej3::CheckNearbyEnemy()
+{
+	UBrainComponent* Brain = GetBrainComponent();
+	UBlackboardComponent* pBlackBoard = Brain->GetBlackboardComponent();
+
+	FVector myPosition = GetOwner()->GetActorLocation();
+
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+
+	APawn* pPawn = GetPawn();
+	TArray<AActor*> ActorsIgnored;
+	ActorsIgnored.Add(pPawn);
+
+	TArray<FHitResult> Hits;
+
+	bool result = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), myPosition, myPosition + 1, TraceRadius, ObjectTypes, false, ActorsIgnored, EDrawDebugTrace::ForDuration, Hits, true);
+
+	if (result)
+	{
+		for (int i = 0; i < Hits.Num(); i++)
+		{
+			FHitResult Hit = Hits[i];
+
+			//ACharacter* pChar = UGameplayStatics::GetPlayerCharacter
+		}
+	}
 }
