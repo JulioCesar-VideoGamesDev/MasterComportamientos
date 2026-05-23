@@ -5,21 +5,22 @@
 #include "BrainComponent.h"
 #include "EngineUtils.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
+#include "GameFramework/Character.h"
+
 #include "BehaviorTree/BlackboardComponent.h"
-
-
 
 void ACharAIC_Ej3::UpdateNextTargetPoint()
 {
 	UBrainComponent* Brain = GetBrainComponent();
 	UBlackboardComponent* pBlackBoard = Brain->GetBlackboardComponent();
 
-	int32 iTargetPointIndex = pBlackBoard->GetValueAsInt("TargetPointIndex");
+	int32 iTargetPointIndex = pBlackBoard->GetValueAsInt(TargetPointIndex_BBKeyName);
 
 	if (iTargetPointIndex >= 4)
 	{
 		iTargetPointIndex = 0;
-		pBlackBoard->SetValueAsInt("TargetPointIndex", iTargetPointIndex);
+		pBlackBoard->SetValueAsInt(TargetPointIndex_BBKeyName, iTargetPointIndex);
 	}
 
 	for (TActorIterator<ATargetPoint_Ej3> It(GetWorld()); It; ++It)
@@ -28,12 +29,12 @@ void ACharAIC_Ej3::UpdateNextTargetPoint()
 
 		if (iTargetPointIndex == pTargetPoint->m_iIndex)
 		{
-			pBlackBoard->SetValueAsVector("TargetPointPosition", pTargetPoint->GetActorLocation());
+			pBlackBoard->SetValueAsVector(TargetPointPosition_BBKeyName, pTargetPoint->GetActorLocation());
 			break;
 		}
 	}
 
-	pBlackBoard->SetValueAsInt("TargetPointIndex", (iTargetPointIndex + 1));
+	pBlackBoard->SetValueAsInt(TargetPointIndex_BBKeyName, (iTargetPointIndex + 1));
 }
 
 void ACharAIC_Ej3::CheckNearbyEnemy()
@@ -60,7 +61,17 @@ void ACharAIC_Ej3::CheckNearbyEnemy()
 		{
 			FHitResult Hit = Hits[i];
 
-			//ACharacter* pChar = UGameplayStatics::GetPlayerCharacter
+			ACharacter* pChar = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+
+			if (Hit.GetActor() == pChar)
+			{
+				pBlackBoard->SetValueAsObject(TargetActorToFollow_BBKeyName, pChar);
+				break;
+			}
 		}
+	}
+	else
+	{
+		Blackboard->SetValueAsObject(TargetActorToFollow_BBKeyName, NULL);
 	}
 }

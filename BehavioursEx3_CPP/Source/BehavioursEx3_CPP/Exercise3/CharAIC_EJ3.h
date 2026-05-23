@@ -14,8 +14,17 @@ class BEHAVIOURSEX3_CPP_API ACharAIC_Ej3 : public AAIController
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(BlueprintReadWrite, Category = "Task")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Task")
 	float TraceRadius{10.f};
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BlackBoardKeys")
+	FName TargetPointIndex_BBKeyName { "" };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BlackBoardKeys")
+	FName TargetPointPosition_BBKeyName{ "" };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BlackBoardKeys")
+	FName TargetActorToFollow_BBKeyName{ "" };
 
 	UFUNCTION(BlueprintCallable, Category = "Task")
 	void UpdateNextTargetPoint();
