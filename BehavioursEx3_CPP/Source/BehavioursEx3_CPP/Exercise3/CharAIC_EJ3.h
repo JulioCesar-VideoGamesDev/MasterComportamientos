@@ -32,4 +32,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Task")
 	void CheckNearbyEnemy();
 
+	UFUNCTION(BlueprintCallable, Category = "Task")
+	EPathFollowingRequestResult::Type MoveToEnemy();
+
 };

@@ -42,7 +42,7 @@ void ACharAIC_Ej3::CheckNearbyEnemy()
 	UBrainComponent* Brain = GetBrainComponent();
 	UBlackboardComponent* pBlackBoard = Brain->GetBlackboardComponent();
 
-	FVector myPosition = GetOwner()->GetActorLocation();
+	FVector myPosition = GetPawn()->GetActorLocation();
 
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
@@ -53,7 +53,7 @@ void ACharAIC_Ej3::CheckNearbyEnemy()
 
 	TArray<FHitResult> Hits;
 
-	bool result = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), myPosition, myPosition + 1, TraceRadius, ObjectTypes, false, ActorsIgnored, EDrawDebugTrace::ForDuration, Hits, true);
+	bool result = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), myPosition, myPosition + 1, TraceRadius, ObjectTypes, false, ActorsIgnored, EDrawDebugTrace::ForOneFrame, Hits, true);
 
 	if (result)
 	{
@@ -74,4 +74,16 @@ void ACharAIC_Ej3::CheckNearbyEnemy()
 	{
 		Blackboard->SetValueAsObject(TargetActorToFollow_BBKeyName, NULL);
 	}
+}
+
+EPathFollowingRequestResult::Type ACharAIC_Ej3::MoveToEnemy()
+{
+	UBrainComponent* Brain = GetBrainComponent();
+	UBlackboardComponent* pBlackBoard = Brain->GetBlackboardComponent();
+
+	AActor* PlayerCharActor = Cast<AActor>(pBlackBoard->GetValueAsObject(TargetActorToFollow_BBKeyName));
+
+	EPathFollowingRequestResult::Type MoveToActorResult = MoveToActor(PlayerCharActor);
+
+	return MoveToActorResult;
 }
